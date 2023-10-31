@@ -1,0 +1,44 @@
+body {
+    background-color: rosybrown;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.embedded-iiif {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 100%;
+}
+
+.iiif {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25em;
+    height: 90vh;
+    width: 50vw;
+}
+
+.frame {
+    height: 100%;
+}
+
+.text {
+    padding: 0 2em;
+}
+
+l {
+    display: block;
+}
+
+lg.distichon > l:nth-child(even) {
+    padding-left: 1rem;
+}
+
+lg.sapphic > l:nth-child(4n) {
+    padding-left: 2em;
+    padding-bottom: 1em;
+}
