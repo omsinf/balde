@@ -1,5 +1,5 @@
 body {
-    background-color: rosybrown;
+    background-color: blanchedalmond;
 }
 
 .main {
@@ -8,6 +8,7 @@ body {
 }
 
 .embedded-iiif {
+    margin: 0 2em;
     display: flex;
     flex-direction: row;
     width: 70%;
@@ -26,19 +27,83 @@ body {
     height: 100%;
 }
 
+.edition {
+    margin: 0 2em;
+}
+
 .text {
+    display: none;
     padding: 0 2em;
 }
 
 l {
     display: block;
+    counter-increment: line-counter 1;
 }
 
-lg.distichon > l:nth-child(even) {
-    padding-left: 1rem;
+lg {
+    position: absolute;
+    counter-reset: line-counter 0;
 }
 
-lg.sapphic > l:nth-child(4n) {
-    padding-left: 2em;
+lg>l:nth-child(5n):before {
+    position: absolute;
+    left: -2em;
+    content: counter(line-counter);
+    font-size: smaller;
+}
+
+lg.alcaic>l:nth-child(4n -1) {
+    margin-left: 1em;
+}
+
+lg.alcaic>l:nth-child(4n) {
+    margin-left: 2em;
     padding-bottom: 1em;
+}
+
+lg.distichon>l:nth-child(even) {
+    margin-left: 1em;
+}
+
+lg.sapphic>l:nth-child(4n) {
+    margin-left: 2em;
+    padding-bottom: 1em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover {
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0.2);
+}
+
+.dropdown-content {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0.2);
+    padding: 0.25em;
+    max-height: 30vh;
+    overflow-y: auto;
+    width: 12em;
+}
+
+.option {
+    margin: 0 0.25em;
+    padding: 0.25em;
+}
+
+.option:hover {
+    background-color: grey;
+    transition-duration: 0.1s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition-duration: 0.1s;
 }

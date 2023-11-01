@@ -12,65 +12,129 @@
         <div class="embedded-iiif">
             <div class="iiif">
                 <h2>Lyrica 1643</h2>
-                <iframe
-                    class="frame"
-                    name="lyrica_1643"
-                    src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11270675/manifest"
-                    >Lyrica 1643</iframe>
-
+                <iframe class="frame" name="lyrica_1643"
+                    src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11270675/manifest">Lyrica
+                    1643</iframe>
             </div>
 
             <div class="iiif">
-
                 <h2>Lyrica 1660</h2>
-
-                <iframe
-                    class="frame" 
-                    name="lyrica_1660"
-                    src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10609929/manifest"
-                    >Lyrica 1660</iframe>
-
-
+                <iframe class="frame" name="lyrica_1660"
+                    src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10609929/manifest">Lyrica
+                    1660</iframe>
             </div>
         </div>
-        <div class="text">
+
+        <div class="edition">
             <h2>Edition</h2>
 
-            <h3>Ovid, Amores 1,1</h3>
-            <lg class="distichon">
-                <l>Arma gravi numero violentaque bella parabam</l>
-                <l>edere, materia conveniente modis.</l>
-                <l>par erat inferior versus—risisse Cupido</l>
-                <l>dicitur atque unum surripuisse pedem.</l>
-                <l>'Quis tibi, saeve puer, dedit hoc in carmina iuris?</l>
-                <l>Pieridum vates, non tua turba sumus.</l>
-                <l>quid, si praeripiat flavae Venus arma Minervae,</l>
-                <l>ventilet accensas flava Minerva faces?</l>
-            </lg>
+            <div class="dropdown">
+                <span>Select</span>
+                <div class="dropdown-content">
+                    <p class="option" onclick="selectText('ovid')">Ovid, Amores 1,1</p>
+                    <p class="option" onclick="selectText('catull')">Catull, carm. 51</p>
+                    <p class="option" onclick="selectText('balde-lyr-3-31')">Balde, Lyr. 3, 31</p>
+                </div>
+            </div>
 
-            <h3>Catull, carm. 51</h3>
-            <lg class="sapphic">
-                <l>Ille mi par esse deo videtur,</l>
-                <l>ille, si fas est, superare divos,</l>
-                <l>qui sedens adversus identidem te</l>
-                <l>spectat et audit</l>
-                <l>dulce ridentem, misero quod omnis</l>
-                <l>eripit sensus mihi: nam simul te,</l>
-                <l>Lesbia, aspexi, nihil est super mi</l>
-                <l>* * * * * * * *</l>
-                <l>lingua sed torpet, tenuis sub artus</l>
-                <l>flamma demanat, sonitu suopte</l>
-                <l>tintinant aures gemina, teguntur</l>
-                <l>lumina nocte.</l>
-                <l>otium, Catulle, tibi molestum est:</l>
-                <l>otio exsultas nimiumque gestis:</l>
-                <l>otium et reges prius et beatas</l>
-                <l>perdidit urbes. </l>
-            </lg>
+            <div id="ovid" class="text">
+                <h3>Ovid, Amores 1,1</h3>
+                <lg class="distichon">
+                    <l>Arma gravi numero violentaque bella parabam</l>
+                    <l>edere, materia conveniente modis.</l>
+                    <l>par erat inferior versus—risisse Cupido</l>
+                    <l>dicitur atque unum surripuisse pedem.</l>
+                    <l>'Quis tibi, saeve puer, dedit hoc in carmina iuris?</l>
+                    <l>Pieridum vates, non tua turba sumus.</l>
+                    <l>quid, si praeripiat flavae Venus arma Minervae,</l>
+                    <l>ventilet accensas flava Minerva faces?</l>
+                </lg>
+            </div>
+
+            <div id="catull" class="text">
+                <h3>Catull, carm. 51</h3>
+                <lg class="sapphic">
+                    <l>Ille mi par esse deo videtur,</l>
+                    <l>ille, si fas est, superare divos,</l>
+                    <l>qui sedens adversus identidem te</l>
+                    <l>spectat et audit</l>
+                    <l>dulce ridentem, misero quod omnis</l>
+                    <l>eripit sensus mihi: nam simul te,</l>
+                    <l>Lesbia, aspexi, nihil est super mi</l>
+                    <l>* * * * * * * *</l>
+                    <l>lingua sed torpet, tenuis sub artus</l>
+                    <l>flamma demanat, sonitu suopte</l>
+                    <l>tintinant aures gemina, teguntur</l>
+                    <l>lumina nocte.</l>
+                    <l>otium, Catulle, tibi molestum est:</l>
+                    <l>otio exsultas nimiumque gestis:</l>
+                    <l>otium et reges prius et beatas</l>
+                    <l>perdidit urbes. </l>
+                </lg>
+            </div>
+
+            <div id="balde-lyr-3-31" class="text">
+                <h3>Balde, Lyr. 3, 31</h3>
+                <lg class="alcaic">
+                    <l>Utcumque gleba subter Achaica</l>
+                    <l>Crepat refossi lamina Caesaris</l>
+                    <l>Detrita, Romanisque nummus</l>
+                    <l>Squalidus eruitur sepulcris;</l>
+                    <l>Nostrate gaza carius aestimas:</l>
+                    <l>Placetque gemmis gratior omnibus,</l>
+                    <l>Conscius in vultus minutos</l>
+                    <l>Materiae veteris tyrannus.</l>
+                    <l>Flammatus, inquis, sic oculos Nero,</l>
+                    <l>Sic Hadrianus, sic pater Aelius,</l>
+                    <l>Sic antecedentes ferebant</l>
+                    <l>Ora Titi solymis timendi.</l>
+                    <l>Bos Iulianum cornibus indicat.</l>
+                    <l>Phocam securis, quam bene barbari</l>
+                    <l>Fastus, et atroces in auro</l>
+                    <l>Stant animi! Iuvat intueri</l>
+                    <l>Rubiginosas saevitiae notas,</l>
+                    <l>Vinctaeque laurum frontis, et asperi</l>
+                    <l>Stellas renidenteis capilli,</l>
+                    <l>Et trabeam, volucremque conto</l>
+                    <l>Supervolantem. Quadri iugos agit</l>
+                    <l>En, Nerva currus victor, et aetheri</l>
+                    <l>Sublimis immittit triumphum.</l>
+                    <l>Ipse sedet, minioque pictus</l>
+                    <l>Iucunda plebis iurgia digerit,</l>
+                    <l>Spectante Roma, tristis, et aspici</l>
+                    <l>Depressus horret signa Dacus,</l>
+                    <l>Ante Iovis feriendus aram.</l>
+                    <l>Haec curioso nuper imaginum,</l>
+                    <l>Philippe, visu multus obiveras.</l>
+                    <l>Inscripta mirabar metallis</l>
+                    <l>Signa quidem faciesque prisco</l>
+                    <l>Horrore fractas; te potius tamen.</l>
+                    <l>Ex quo loquentem prisca Boethium,</l>
+                    <l>Gracchosque, et antiquum Catonem,</l>
+                    <l>Ac Fabios mihi Consulares</l>
+                    <l>Audire visus, nil pretiosius</l>
+                    <l>Desiderabam. Pectore in unico</l>
+                    <l>Se tota spectandam Vetustas</l>
+                    <l>Exhibet, historisque ludit.</l>
+                    <l>Verendus annis iam propioribus</l>
+                    <l>Sisti, sonantem Diis animam bonis</l>
+                    <l>Fers in senatum, viva Scauri</l>
+                    <l>Effigies, Thraseaeque magni.</l>
+                    <l>Namque et benignus candor, et inclytae</l>
+                    <l>Magnaeque Mentis copia fulgurat;</l>
+                    <l>Ruptura per quascumque nubeis</l>
+                    <l>Consiliis, agilique telo</l>
+                    <l>Sagacitatis. Tu bene perspicax,</l>
+                    <l>Ventura tangis pollice Delphico:</l>
+                    <l>Doctusque coniectare verum,</l>
+                    <l>Luce frui potes obserata.</l>
+                </lg>
+            </div>
 
         </div>
     </div>
 
+    <script src="./balde.js"></script>
 </body>
 
 </html>
