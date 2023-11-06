@@ -10,7 +10,7 @@ body {
 .embedded-iiif {
     margin: 0 2em;
     display: flex;
-    flex-direction: row;
+    flex-flow: wrap;
     width: 70%;
     height: 100%;
 }
@@ -18,9 +18,8 @@ body {
 .iiif {
     display: flex;
     flex-direction: column;
-    padding: 0.25em;
     height: 90vh;
-    width: 50vw;
+    width: 50%;
 }
 
 .frame {
