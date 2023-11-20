@@ -7,85 +7,62 @@
 </head>
 
 <body>
+    <div class="balde-header">
+        <div class="edition-menu">
+            <div class="option">
+                <input type="checkbox" onclick="toggleEdition('lyrica_1643')">
+                <span>Balde: Lyrica (1643)</span>
+            </div>
+            <div class="option">
+                <input type="checkbox" onclick="toggleEdition('lyrica_1660')">
+                <span>Balde: Lyrica (1660)</span>
+            </div>
+            <div class="option">
+                <input type="checkbox" onclick="toggleEdition('lyrica_1729')">
+                <span>Balde: Lyrica (1729)</span>
+            </div>
+            <div class="option">
+                <input type="checkbox" onclick="toggleEdition('lyrica_1805_orellius')">
+                <span>Balde: Lyrica (1805, ed. Orellius)</span>
+            </div>
+        </div>
+        <span>Fecit OMS 2023</span>
+    </div>
+
     <div class="main">
 
         <div class="embedded-iiif">
-            <div class="iiif">
+            <div id="lyrica_1643" class="iiif">
                 <h2>Lyrica 1643</h2>
                 <iframe class="frame" name="lyrica_1643"
                     src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11270675/manifest">Lyrica
                     1643</iframe>
             </div>
 
-            <div class="iiif">
+            <div id="lyrica_1660" class="iiif display-none">
                 <h2>Lyrica 1660</h2>
                 <iframe class="frame" name="lyrica_1660"
                     src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10609929/manifest">Lyrica
                     1660</iframe>
             </div>
 
-            <div class="iiif">
+            <div id="lyrica_1729" class="iiif display-none">
+                <h2>Lyrica 1729</h2>
+                <iframe class="frame" name="lyrica_1660"
+                    src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10712436/manifest">Lyrica
+                    1660</iframe>
+            </div>
+
+            <div id="lyrica_1805_orellius" class="iiif display-none">
                 <h2>Lyrica ed. Orellius 1805</h2>
                 <iframe class="frame" name="lyrica_orellius_1805"
                     src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10608714/manifest">Lyrica
                     ed. Orellius 1805</iframe>
             </div>
-
-            <div class="iiif">
-                <h2>Lyrica III tr. Neubig 1830</h2>
-                <iframe class="frame" name="lyrica_neubig_1830"
-                    src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11000761/manifest">Lyrica
-                    III tr. Neubig 1830</iframe>
-            </div>
         </div>
 
-        <div class="edition">
+        <!--<div class="edition">
             <h2>Edition</h2>
-
-            <div class="dropdown">
-                <span>Select</span>
-                <div class="dropdown-content">
-                    <p class="option" onclick="selectText('ovid')">Ovid, Amores 1,1</p>
-                    <p class="option" onclick="selectText('catull')">Catull, carm. 51</p>
-                    <p class="option" onclick="selectText('balde-lyr-3-31')">Balde, Lyr. 3, 31</p>
-                </div>
-            </div>
-
-            <div id="ovid" class="text">
-                <h3>Ovid, Amores 1,1</h3>
-                <lg class="distichon">
-                    <l>Arma gravi numero violentaque bella parabam</l>
-                    <l>edere, materia conveniente modis.</l>
-                    <l>par erat inferior versus—risisse Cupido</l>
-                    <l>dicitur atque unum surripuisse pedem.</l>
-                    <l>'Quis tibi, saeve puer, dedit hoc in carmina iuris?</l>
-                    <l>Pieridum vates, non tua turba sumus.</l>
-                    <l>quid, si praeripiat flavae Venus arma Minervae,</l>
-                    <l>ventilet accensas flava Minerva faces?</l>
-                </lg>
-            </div>
-
-            <div id="catull" class="text">
-                <h3>Catull, carm. 51</h3>
-                <lg class="sapphic">
-                    <l>Ille mi par esse deo videtur,</l>
-                    <l>ille, si fas est, superare divos,</l>
-                    <l>qui sedens adversus identidem te</l>
-                    <l>spectat et audit</l>
-                    <l>dulce ridentem, misero quod omnis</l>
-                    <l>eripit sensus mihi: nam simul te,</l>
-                    <l>Lesbia, aspexi, nihil est super mi</l>
-                    <l>* * * * * * * *</l>
-                    <l>lingua sed torpet, tenuis sub artus</l>
-                    <l>flamma demanat, sonitu suopte</l>
-                    <l>tintinant aures gemina, teguntur</l>
-                    <l>lumina nocte.</l>
-                    <l>otium, Catulle, tibi molestum est:</l>
-                    <l>otio exsultas nimiumque gestis:</l>
-                    <l>otium et reges prius et beatas</l>
-                    <l>perdidit urbes. </l>
-                </lg>
-            </div>
 
             <div id="balde-lyr-3-31" class="text">
                 <h3>Balde, Lyr. 3, 31</h3>
@@ -145,7 +122,7 @@
                 </lg>
             </div>
 
-        </div>
+        </div>-->
     </div>
 
     <script src="./balde.js"></script>
