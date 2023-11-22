@@ -4,7 +4,6 @@ body {
 }
 
 .balde-header {
-    padding: 0.5em;
     font-size: 1.5em;
     display: flex;
     justify-content: space-between;
@@ -18,13 +17,18 @@ input[type=checkbox] {
     transform: scale(1.2);
 }
 
-span {
-    padding-left: 0.25em;
-}
-
 .main {
     display: flex;
     flex-direction: row;
+}
+
+.placeholder {
+    z-index: -5;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
 }
 
 .embedded-iiif {
@@ -111,14 +115,23 @@ lg.sapphic>l:nth-child(4n) {
     width: 12em;
 }
 
+.header-field {
+    padding: 0.5em;
+}
+
+
 .option {
-    margin: 0 0.25em;
     display: flex;
     align-items: center;
 }
 
+.option-selected {
+    background-color: gray;
+}
+
 .option:hover {
-    background-color: lightblue;
+    background-color: lightgray;
+    text-decoration: underline;
     transition-duration: 0.1s;
 }
 
