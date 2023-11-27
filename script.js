@@ -5,7 +5,7 @@ function initialLoad() {
     for (c of checkboxes) {
         c.checked = false;
     }
-    var frames = document.getElementsByClassName("iiif");
+    var frames = document.getElementsByClassName("edition-container");
     for (f of frames) {
         f.classList.add("display-none");
     }
@@ -25,6 +25,25 @@ function toggleEdition(editionId) {
     optionField.classList.toggle("option-selected");
     const frame = document.getElementById(editionId);
     frame.classList.toggle("display-none");
+    if (numberOfEditionsAtDisplay() > 0) {
+        const placeholder = document.getElementById("placeholder");
+        placeholder.classList.add("display-none");
+    } else {
+        const placeholder = document.getElementById("placeholder");
+        placeholder.classList.remove("display-none");
+    }
+    // hide placeholder if there is at least one edition selected
+}
+
+function numberOfEditionsAtDisplay() {
+    const editionContainers = document.getElementsByClassName('edition-container');
+    var n = editionContainers.length;
+    for (ec of editionContainers) {
+        if (ec.classList.value.includes("display-none")) {
+            n -= 1;
+        }
+    }
+    return n;
 }
 
 function goToText(editionId, textId) {
