@@ -7,28 +7,28 @@
 </head>
 
 <body>
-    <div class="balde-header">
-        <div class="edition-menu">
-            <div id="hf_lyrica_1643" class="header-field option" onclick="toggleEdition('lyrica_1643')">
-                <span>Lyrica (1643)</span>
-            </div>
-            <div id="hf_lyrica_1660" class="header-field option" onclick="toggleEdition('lyrica_1660')">
-                <span>Lyrica (1660)</span>
-            </div>
-            <div id="hf_lyrica_1729" class="header-field option" onclick="toggleEdition('lyrica_1729')">
-                <span>Lyrica (1729)</span>
-            </div>
-            <div id="hf_lyrica_1805" class="header-field option" onclick="toggleEdition('lyrica_1805')">
-                <span>Lyrica (1805, ed. Orellius)</span>
-            </div>
-            <div id="hf_lyrica_1844" class="header-field option" onclick="toggleEdition('lyrica_1844')">
-                <span>Lyrica (1844, ed. Müller)</span>
-            </div>
-            <div id="hf_lyrica_baldeani" class="header-field option" onclick="toggleEdition('lyrica_baldeani')">
-                <span>Lyrica (edd. Baldeani)</span>
-            </div>
+    <div class="header">
+        <div id="hf_lyrica_1643" class="header-field option" onclick="toggleEdition('lyrica_1643')">
+            <span>Lyrica (1643)</span>
         </div>
-        <span class="header-field">Fecit OMS 2023</span>
+        <div id="hf_lyrica_1660" class="header-field option" onclick="toggleEdition('lyrica_1660')">
+            <span>Lyrica (1660)</span>
+        </div>
+        <div id="hf_lyrica_1729" class="header-field option" onclick="toggleEdition('lyrica_1729')">
+            <span>Lyrica (1729)</span>
+        </div>
+        <div id="hf_lyrica_1805" class="header-field option" onclick="toggleEdition('lyrica_1805')">
+            <span>Lyrica (1805, ed. Orellius)</span>
+        </div>
+        <div id="hf_lyrica_1844" class="header-field option" onclick="toggleEdition('lyrica_1844')">
+            <span>Lyrica (1844, ed. Müller)</span>
+        </div>
+        <div id="hf_lyrica_baldeani" class="header-field option" onclick="toggleEdition('lyrica_baldeani')">
+            <span>Lyrica (edd. Baldeani)</span>
+        </div>
+        <div class="header-field">
+            <span>Fecit OMS 2023</span>
+        </div>
     </div>
 
     <div class="main">
@@ -40,106 +40,282 @@
             <p>Ausgewählte Texte sind grau markiert;<br />erneutes Klicken blendet sie wieder aus.</p>
         </div>
 
-        <div id="lyrica_1643" class="edition-container">
+        <div id="lyrica_1643" class="content-field">
             <h2>Lyrica 1643</h2>
             <iframe class="frame" id="iframe_lyrica_1643"
                 src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11270675/manifest&c=0&m=0&cv=120&xywh=0,0,200,300">Lyrica
                 1643</iframe>
         </div>
 
-        <div id="lyrica_1660" class="edition-container">
+        <div id="lyrica_1660" class="content-field">
             <h2>Lyrica 1660</h2>
             <iframe class="frame" id="iframe_lyrica_1660"
                 src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10609929/manifest">Lyrica
                 1660</iframe>
         </div>
 
-        <div id="lyrica_1729" class="edition-container">
+        <div id="lyrica_1729" class="content-field">
             <h2>Lyrica 1729</h2>
-            <iframe class="frame" id="irame_lyrica_1729"
+            <iframe class="frame" id="iframe_lyrica_1729"
                 src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10712436/manifest">Lyrica
                 1660</iframe>
         </div>
 
-        <div id="lyrica_1805" class="edition-container">
+        <div id="lyrica_1805" class="content-field">
             <h2>Lyrica ed. Orellius 1805</h2>
             <iframe class="frame" id="iframe_lyrica_1805"
                 src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10608714/manifest">Lyrica
                 ed. Orellius 1805</iframe>
         </div>
 
-        <div id="lyrica_1844" class="edition-container">
+        <div id="lyrica_1844" class="content-field">
             <h2>Lyrica ed. Müller 1844</h2>
             <iframe class="frame" id="iframe_lyrica_1844"
                 src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10608720/manifest">Lyrica
                 ed. Müller 1844</iframe>
         </div>
 
-        <div id="lyrica_baldeani" class="edition-container">
+        <div id="lyrica_baldeani" class="content-field">
             <h2>Lyrica edd. Baldeani</h2>
+            <div class="centered">
+                <div class="dropdown">
+                    <h3>Elenchus Odarum</h3>
+                    <div class="dropdown-container">
+                        <div class="dropdown-content">
+                            <span class="dropdown-item option" onclick="selectText('balde-lyr-3-31')">Lyr. 3, 31</span>
+                            <span class="dropdown-item option" onclick="selectText('balde-lyr-3-32')">Lyr. 3, 32</span>
+                            <span class="dropdown-item option" onclick="selectText('balde-lyr-3-33')">Lyr. 3, 33</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="balde-lyr-3-31" class="edition">
                 <h3>Balde, Lyr. 3, 31</h3>
                 <div class="scrollable-text-container">
-                    <lg class="alcaic">
-                        <l>Utcumque gleba subter Achaica</l>
-                        <l>Crepat refossi lamina Caesaris</l>
-                        <l>Detrita, Romanisque nummus</l>
-                        <l>Squalidus eruitur sepulcris;</l>
-                        <l>Nostrate gaza carius aestimas:</l>
-                        <l>Placetque gemmis gratior omnibus,</l>
-                        <l>Conscius in vultus minutos</l>
-                        <v>Concisus] Müller</v>
-                        <l>Materiae veteris tyrannus.</l>
-                        <l>Flammatus, inquis, sic oculos Nero,</l>
-                        <l>Sic Hadrianus, sic pater Aelius,</l>
-                        <l>Sic antecedentes ferebant</l>
-                        <l>Ora Titi solymis timendi.</l>
-                        <l>Bos Iulianum cornibus indicat.</l>
-                        <l>Phocam securis, quam bene barbari</l>
-                        <l>Fastus, et atroces in auro</l>
-                        <l>Stant animi! Iuvat intueri</l>
-                        <l>Rubiginosas saevitiae notas,</l>
-                        <l>Vinctaeque laurum frontis, et asperi</l>
-                        <l>Stellas renidenteis capilli,</l>
-                        <l>Et trabeam, volucremque conto</l>
-                        <l>Supervolantem. Quadri iugos agit</l>
-                        <l>En, Nerva currus victor, et aetheri</l>
-                        <l>Sublimis immittit triumphum.</l>
-                        <l>Ipse sedet, minioque pictus</l>
-                        <l>Iucunda plebis iurgia digerit,</l>
-                        <l>Spectante Roma, tristis, et aspici</l>
-                        <l>Depressus horret signa Dacus,</l>
-                        <l>Ante Iovis feriendus aram.</l>
-                        <l>Haec curioso nuper imaginum,</l>
-                        <l>Philippe, visu multus obiveras.</l>
-                        <l>Inscripta mirabar metallis</l>
-                        <l>Signa quidem faciesque prisco</l>
-                        <l>Horrore fractas; te potius tamen.</l>
-                        <l>Ex quo loquentem prisca Boethium,</l>
-                        <l>Gracchosque, et antiquum Catonem,</l>
-                        <l>Ac Fabios mihi Consulares</l>
-                        <l>Audire visus, nil pretiosius</l>
-                        <l>Desiderabam. Pectore in unico</l>
-                        <l>Se tota spectandam Vetustas</l>
-                        <l>Exhibet, historisque ludit.</l>
-                        <l>Verendus annis iam propioribus</l>
-                        <l>Sisti, sonantem Diis animam bonis</l>
-                        <l>Fers in senatum, viva Scauri</l>
-                        <l>Effigies, Thraseaeque magni.</l>
-                        <l>Namque et benignus candor, et inclytae</l>
-                        <l>Magnaeque Mentis copia fulgurat;</l>
-                        <l>Ruptura per quascumque nubeis</l>
-                        <l>Consiliis, agilique telo</l>
-                        <l>Sagacitatis. Tu bene perspicax,</l>
-                        <l>Ventura tangis pollice Delphico:</l>
-                        <l>Doctusque coniectare verum,</l>
-                        <l>Luce frui potes obserata.</l>
-                    </lg>
+                    <div class="scrollable-text">
+                        <lg class="title">
+                            <l class="cursive">Ad illustrissimum</l>
+                            <l>PHILIPPUM BREVANUM</l>
+                            <l class="cursive">Cum Auctori antiqua numismata monstraret.</l>
+                            <l>ODE XXXI</l>
+                        </lg>
+                        <lg class="alcaic">
+                            <l>Utcumque gleba subter Achaica</l>
+                            <l>Crepat refossi lamina Caesaris</l>
+                            <l>Detrita, Romanisque nummus</l>
+                            <l>Squalidus eruitur sepulcris;</l>
+                            <l>Nostrate gaza carius aestimas:</l>
+                            <l>Placetque gemmis gratior omnibus,</l>
+                            <l>Concisus in vultus minutos</l>
+                            <l>Materiae veteris tyrannus.</l>
+                            <l>Flammatus, inquis, sic oculos Nero,</l>
+                            <l>Sic Hadrianus, sic pater Aelius,</l>
+                            <l>Sic antecedentes ferebant</l>
+                            <l>Ora Titi solymis timendi.</l>
+                            <l>Bos Iulianum cornibus indicat.</l>
+                            <l>Phocam securis, quam bene barbari</l>
+                            <l>Fastus, et atroces in auro</l>
+                            <l>Stant animi! Iuvat intueri</l>
+                            <l>Rubiginosas saevitiae notas,</l>
+                            <l>Vinctaeque laurum frontis, et asperi</l>
+                            <l>Stellas renidenteis capilli,</l>
+                            <l>Et trabeam, volucremque conto</l>
+                            <l>Supervolantem. Quadri iugos agit</l>
+                            <l>En, Nerva currus victor, et aetheri</l>
+                            <l>Sublimis immittit triumphum.</l>
+                            <l>Ipse sedet, minioque pictus</l>
+                            <l>Iucunda plebis iurgia digerit,</l>
+                            <l>Spectante Roma, tristis, et aspici</l>
+                            <l>Depressus horret signa Dacus,</l>
+                            <l>Ante Iovis feriendus aram.</l>
+                            <l>Haec curioso nuper imaginum,</l>
+                            <l>Philippe, visu multus obiveras.</l>
+                            <l>Inscripta mirabar metallis</l>
+                            <l>Signa quidem faciesque prisco</l>
+                            <l>Horrore fractas; te potius tamen.</l>
+                            <l>Ex quo loquentem prisca Boethium,</l>
+                            <l>Gracchosque, et antiquum Catonem,</l>
+                            <l>Ac Fabios mihi Consulares</l>
+                            <l>Audire visus, nil pretiosius</l>
+                            <l>Desiderabam. Pectore in unico</l>
+                            <l>Se tota spectandam Vetustas</l>
+                            <l>Exhibet, historisque ludit.</l>
+                            <l>Verendus annis iam propioribus</l>
+                            <l>Sisti, sonantem Diis animam bonis</l>
+                            <l>Fers in senatum, viva Scauri</l>
+                            <l>Effigies, Thraseaeque magni.</l>
+                            <l>Namque et benignus candor, et inclytae</l>
+                            <l>Magnaeque Mentis copia fulgurat;</l>
+                            <l>Ruptura per quascumque nubeis</l>
+                            <l>Consiliis, agilique telo</l>
+                            <l>Sagacitatis. Tu bene perspicax,</l>
+                            <l>Ventura tangis pollice Delphico:</l>
+                            <l>Doctusque coniectare verum,</l>
+                            <l>Luce frui potes obserata.</l>
+                        </lg>
+                    </div>
+                </div>
+            </div>
+
+            <div id="balde-lyr-3-32" class="edition">
+                <h3>Balde, Lyr. 3, 32</h3>
+                <div class="scrollable-text-container">
+                    <div class="scrollable-text">
+                        <lg class="title">
+                            <l>AD JOHANNEM TARANDAM</l>
+                            <l class="cursive">Iuvenem se scribendis Satyris operam dedisse.</l>
+                            <l>ODE XXXII</l>
+                        </lg>
+                        <lg class="sapphic">
+                            <l>Ille ego primis iaculator annis,</l>
+                            <l>Certus audaci Satyra ferire</l>
+                            <l>Punicas aureis, inimica tandem</l>
+                            <l>Peila recondo.</l>
+                            <l>In suas traxit Iuvenalis olim</l>
+                            <l>Fervidum parteis: rabieque sacra</l>
+                            <l>Imbuit venam, velut acta taedis</l>
+                            <l>Volsca Mimallon.</l>
+                            <l>Robur et vireis , animosque et iras</l>
+                            <l>Flaccus addebat sale maceratas:</l>
+                            <l>Persius bilem stimulavit et</l>
+                            <l>Lucilius atram.</l>
+                            <l>Cui lacessitus timide peperci?</l>
+                            <l>Quem tuli nostros ale provocantem</l>
+                            <l>Zoilum nervos? Quot ad usque restim</l>
+                            <l>Paene coegi?</l>
+                            <l>Semper armatus, gradiebar instar</l>
+                            <l>Hystricis, retro mediantis ictum:</l>
+                            <l>Omnibus membris in arundinetum et</l>
+                            <l>Spicula versis.</l>
+                            <l>Nunc in obliquum celeris iambos, i</l>
+                            <l>Et Lycambeo madidos cruore;</l>
+                            <l>Nunc in adversum redeunte penna,</l>
+                            <l>Vulnera fixi.</l>
+                            <l>Mitius quondam furit orba tigris,</l>
+                            <l>Ante speluncam: minus Ursa maior</l>
+                            <l>Iam bipes saevit. Minus icta calce</l>
+                            <l>Vipera mordet.</l>
+                            <l>Flevit ultrici furiale Muffo</l>
+                            <l>Taurea caesus, vomuitque flammam;</l>
+                            <l>Saeva per crassas micuere Nelli</l>
+                            <l>Fulgura nareis</l>
+                            <l>Risit iratus Maracipsa moestum,</l>
+                            <l>Vique seposti stupuit doloris:</l>
+                            <l>Et femur supra posuit trementis</l>
+                            <l>Vincula surae.</l>
+                            <l>Vappius nostros ubicumque vultus</l>
+                            <l>Nunc quoque incurrit, fugitivus horret:</l>
+                            <l>Atra ceu trist Nemesis sequatur</l>
+                            <l>Terga flagello.</l>
+                            <l>Dum novum morti speculatus hostem.</l>
+                            <l>Cote liventeis acuo sagittas:</l>
+                            <l>Ecce, vindictae subito resedit</l>
+                            <l>Dira cupido.</l>
+                            <l>Defluunt arcus, subeunte molli</l>
+                            <l>Pectoris costas animum sensu:</l>
+                            <l>Et repentinum lupus, o Taranda,</l>
+                            <l>Mutor in agnum.</l>
+                            <l>Non libet duros iterare caestus:</l>
+                            <l>Languet exermi genuinus ore.</l>
+                            <l>Rixa cum primis calet orta verbis,</l>
+                            <l>Cedimus ultro.</l>
+                            <l>Semen irarum removere velox,</l>
+                            <l>Nil volat terris modo, nil Aquino;</l>
+                            <l>Arduis totum sed enim Sabinis</l>
+                            <l>Debeo plectrum.</l>
+                            <l>Quod cano, flos est, vel amica Virgo:</l>
+                            <l>Vel nemus sacrum, riguique puris</l>
+                            <l>Fontibus colles, et amans sororis</l>
+                            <l>Gratia nodum.</l>
+                            <l>Vivo me plenus, nihil appetendo,</l>
+                            <l>Neminis sternax: et utramque Sortem</l>
+                            <l>In sinu porro; neque iam timendus</l>
+                            <l>Vitor ab ullis.</l>
+                            <l>Inter admissus Socios, cuivis</l>
+                            <l>Laesus ignosco: licet immerentis</l>
+                            <l>Saepe latratum caput obstrepens ca-</l>
+                            <l>lumnia pulset.</l>
+                            <l>Candidus morum, quotiens amaros</l>
+                            <l>Audio risus? Quotiens ad arma</l>
+                            <l>Tardus irritor, veterem monendus</l>
+                            <l>Stringere versum?</l>
+                            <l>Abnego ferrum tamen, et duella.</l>
+                            <l>Omnibus caecum videor cadaver:</l>
+                            <l>Quod viri iuxta puerique pronum</l>
+                            <l>Impune supinent.</l>
+                            <l>Hic manu nasum trahit: ille barbam</l>
+                            <l>Vellit ac crineis; Maciemque magnae</l>
+                            <l>Consociam Famae pavidus tueri</l>
+                            <l>Cominus audet.</l>
+                            <l>Qualis Androcli leo mansuetus</l>
+                            <l>Fertur Albanos habitasse monteis:</l>
+                            <l>Arva securo grege caprearum</l>
+                            <l>Praetereunte.</l>
+                            <l>Scilicet probris oneratus omni</l>
+                            <l>Dormiam vulpi! Patiarque plebis</l>
+                            <l>Improbae Maneis, tacitusque nulli</l>
+                            <l>Iusta reponam!</l>
+                            <l>Surge Samsones imitate, Vates,</l>
+                            <l>Et Philisteos super ire Momos,</l>
+                            <l>Hinc et hinc, uno geminas tumultu</l>
+                            <l>Sterne columnas.</l>
+                        </lg>
+                    </div>
+                </div>
+            </div>
+
+            <div id="balde-lyr-3-33" class="edition">
+                <h3>Balde, Lyr. 3, 33</h3>
+                <div class="scrollable-text-container">
+                    <div class="scrollable-text">
+                        <lg class="title">
+                            <l>AD DIDACUM WALORSCIUM</l>
+                            <l class="cursive">Humana vita, laboriosa navigatio.</l>
+                            <l>ODE XXXIII</l>
+                            <l class="cursive">Delicatum et timidum senem irridet</l>
+                        </lg>
+                        <lg class="asclep4">
+                            <l>Res est seria, vivere,</l>
+                            <l>Si nescis, pelagus, Didace navigas.</l>
+                            <l>Naulum, seu veheris, dare;</l>
+                            <l>Temet sive vehis, pendere cogeris</l>
+                            <l>Vectigal domino maris.</l>
+                            <l>Haesuras animo pende molestias:</l>
+                            <l>Quo te cumque feret Notus,</l>
+                            <l>Mortis pende metum disce malis miser</l>
+                            <l>Occallescere nauticus.</l>
+                            <l>Semper vita fuit triste negotium.</l>
+                            <l>Ipso quin adeo, licet</l>
+                            <l>Ad Litus cinerum ieceris Anchoram;</l>
+                            <l>In portu tumulaberis.</l>
+                            <l>Tecum et fracta ratis, corpus inutile, et</l>
+                            <l>Membrorum lacerae trabes:</l>
+                            <l>Rostratum caput ac remigium manus</l>
+                            <l>Sentinamque uterus trahens,</l>
+                            <l>Cum prora, et vacui puppe cadaveris.</l>
+                            <l>Scribetur super asserem:</l>
+                            <l>Hac fossa situs est nauta Walorscius:</l>
+                            <l>Unus quem superaverat</l>
+                            <l>Squalore ac macie terribilis Charon</l>
+                            <l>In contemptor opum fuit;</l>
+                            <l>Sed vitae pariter sordibus Euclio,</l>
+                            <l>Aevique insatiabilis.</l>
+                            <l>Quum Fatum tacitis passibus ultimum,</l>
+                            <l>Aegri reperet ad pedes:</l>
+                            <l>Questus multa deos, ingemuit rapi</l>
+                            <l>Immaturus, et annuam</l>
+                            <l>A duris petiit Caelicolis stipem:</l>
+                            <l>Accepitque biennium.</l>
+                            <l>Atqui lustra senex bis tulerat Novem</l>
+                            <l>Curvo vertice depilis</l>
+                            <l>Tandem disperiit non sine lacrima.</l>
+                        </lg>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <script src="./script.js"></script>
 </body>

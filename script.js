@@ -5,14 +5,18 @@ function initialLoad() {
     for (c of checkboxes) {
         c.checked = false;
     }
-    var frames = document.getElementsByClassName("edition-container");
+    var frames = document.getElementsByClassName("content-field");
     for (f of frames) {
         f.classList.add("display-none");
+    }
+    var texts = document.getElementsByClassName("edition");
+    for (tx of texts) {
+        tx.style.display = "none";
     }
 }
 
 function selectText(textId) {
-    var texts = document.getElementsByClassName("text");
+    var texts = document.getElementsByClassName("edition");
     for (tx of texts) {
         tx.style.display = "none";
     }
@@ -22,21 +26,20 @@ function selectText(textId) {
 
 function toggleEdition(editionId) {
     const optionField = document.getElementById(`hf_${editionId}`);
-    optionField.classList.toggle("option-selected");
+    optionField.classList.toggle("header-field-selected");
     const frame = document.getElementById(editionId);
     frame.classList.toggle("display-none");
-    if (numberOfEditionsAtDisplay() > 0) {
+    if (numberOfFieldsAtDisplay() > 0) {
         const placeholder = document.getElementById("placeholder");
         placeholder.classList.add("display-none");
     } else {
         const placeholder = document.getElementById("placeholder");
         placeholder.classList.remove("display-none");
     }
-    // hide placeholder if there is at least one edition selected
 }
 
-function numberOfEditionsAtDisplay() {
-    const editionContainers = document.getElementsByClassName('edition-container');
+function numberOfFieldsAtDisplay() {
+    const editionContainers = document.getElementsByClassName('content-field');
     var n = editionContainers.length;
     for (ec of editionContainers) {
         if (ec.classList.value.includes("display-none")) {
