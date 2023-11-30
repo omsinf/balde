@@ -5,10 +5,9 @@ body {
 }
 
 .header {
-    font-size: 1.5em;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .header-field {
@@ -43,7 +42,16 @@ body {
     min-width: 33%;
     height: 90vh;
 }
- /* Facsimiles */
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.display-none {
+    display: none;
+}
+
+/* Facsimiles */
 .frame {
     height: 100%;
 }
@@ -51,6 +59,7 @@ body {
 /* Text edition */
 .edition {
     margin: 0 auto;
+    font-size: 1.2em;
 }
 
 .scrollable-text-container {
@@ -181,6 +190,7 @@ h3 {
     font-style: italic;
 }
 
-.display-none {
-    display: none;
+v {
+    text-decoration: dotted underline;
+    text-decoration-thickness: 2pt;
 }
