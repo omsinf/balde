@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Balde online</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div id="hf_lyrica_1643" class="header-field option" onclick="toggleEdition('lyrica_1643')">
+            <span>Lyrica (1643)</span>
+        </div>
+        <div id="hf_lyrica_1660" class="header-field option" onclick="toggleEdition('lyrica_1660')">
+            <span>Lyrica (1660)</span>
+        </div>
+        <div id="hf_lyrica_1729" class="header-field option" onclick="toggleEdition('lyrica_1729')">
+            <span>Lyrica (1729)</span>
+        </div>
+        <div id="hf_lyrica_1805" class="header-field option" onclick="toggleEdition('lyrica_1805')">
+            <span>Lyrica (1805, ed. Orellius)</span>
+        </div>
+        <div id="hf_lyrica_1844" class="header-field option" onclick="toggleEdition('lyrica_1844')">
+            <span>Lyrica (1844, ed. Müller)</span>
+        </div>
+        <div id="hf_lyrica_baldeani" class="header-field option" onclick="toggleEdition('lyrica_baldeani')">
+            <span>Lyrica (edd. Baldeani)</span>
+        </div>
+        <div class="header-field ml-auto">
+            <span>Fecit OMS 2023</span>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div id="placeholder" class="placeholder">
+            <p>Kein Text ausgewählt.</p>
+            <p>Um einen Text anzuzeigen,<br />oben auf die jeweilige Ausgabe klicken.</p>
+            <p>Es können mehrere Texte gleichzeitig angezeigt werden.</p>
+            <p>Ausgewählte Texte sind grau markiert;<br />erneutes Klicken blendet sie wieder aus.</p>
+        </div>
+
+        <div id="lyrica_1643" class="content-field">
+            <h2>Lyrica 1643</h2>
+            <iframe class="frame" id="iframe_lyrica_1643"
+                src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11270675/manifest">Lyrica
+                1643</iframe>
+        </div>
+
+        <div id="lyrica_1660" class="content-field">
+            <h2>Lyrica 1660</h2>
+            <iframe class="frame" id="iframe_lyrica_1660"
+                src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10609929/manifest">Lyrica
+                1660</iframe>
+        </div>
+
+        <div id="lyrica_1729" class="content-field">
+            <h2>Lyrica 1729</h2>
+            <iframe class="frame" id="iframe_lyrica_1729"
+                src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10712436/manifest">Lyrica
+                1660</iframe>
+        </div>
+
+        <div id="lyrica_1805" class="content-field">
+            <h2>Lyrica ed. Orellius 1805</h2>
+            <iframe class="frame" id="iframe_lyrica_1805"
+                src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10608714/manifest">Lyrica
+                ed. Orellius 1805</iframe>
+        </div>
+
+        <div id="lyrica_1844" class="content-field">
+            <h2>Lyrica ed. Müller 1844</h2>
+            <iframe class="frame" id="iframe_lyrica_1844"
+                src="https://universalviewer.io/uv.html?manifest=https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10608720/manifest">Lyrica
+                ed. Müller 1844</iframe>
+        </div>
+
+        <div id="lyrica_baldeani" class="content-field">
+            <h2>Lyrica edd. Baldeani</h2>
+            <div class="centered">
+                <div class="dropdown">
+                    <h3>Elenchus Odarum</h3>
+                    <div class="dropdown-container">
+                        <div class="dropdown-content">
+                            <span class="dropdown-item option" onclick="selectText('balde-lyr-3-31')">Lyr. 3, 31</span>
+                            <span class="dropdown-item option" onclick="selectText('balde-lyr-3-32')">Lyr. 3, 32</span>
+                            <span class="dropdown-item option" onclick="selectText('balde-lyr-3-33')">Lyr. 3, 33</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <texts-placeholder />
+            
+
+            
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
