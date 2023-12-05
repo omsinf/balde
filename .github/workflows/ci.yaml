@@ -1,0 +1,38 @@
+name: ci
+on: [push]
+jobs:
+  build:
+    env:
+      SOURCE: template.html
+      XSL_FILE: compose.xsl
+      OUTPUT: index.html
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+      - run: pwd
+      - run: ls .
+      - name: Install dependencies
+        run: npm install -g xslt3
+      - name: Run XSLT transformation
+        run: xslt3 -xsl:$XSL_FILE -s:$SOURCE -o:$OUTPUT -t
+      - run: mkdir artifacts
+      - run: cp index.html artifacts
+      - run: cp script.js artifacts
+      - run: cp style.css artifacts
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: artifacts
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
