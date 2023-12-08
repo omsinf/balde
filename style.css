@@ -1,7 +1,11 @@
 /* Page */
 body {
     margin: 0;
+    height: 100vh;
     background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 .header {
@@ -19,10 +23,12 @@ body {
 }
 
 .main {
+    min-height: 70%;
+    /* fill the page vertically to 100% minus header */
+    flex-grow: 1;
+    width: 100%;
     display: flex;
     flex-flow: wrap;
-    width: 100%;
-    height: 100%;
 }
 
 .placeholder {
@@ -36,36 +42,37 @@ body {
 
 /* Fields for content */
 .content-field {
+    height: 100%;
+    min-width: 33%;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    min-width: 33%;
-    height: 90vh;
+    overflow-y: auto;
 }
 
 .ml-auto {
     margin-left: auto;
 }
 
-.display-none {
-    display: none;
-}
-
 /* Facsimiles */
 .frame {
-    height: 100%;
+    flex-grow: 1;
 }
 
 /* Text edition */
 .edition {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
     font-size: 1.2em;
 }
 
 .scrollable-text-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
     overflow-y: auto;
-    height: 75vh;
 }
 
 .scrollable-text {
@@ -133,7 +140,6 @@ lg.sapphic>l:nth-of-type(4n) {
 .dropdown:hover {
     background-color: lightgray;
     text-decoration: underline;
-    /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0.2);*/
 }
 
 .dropdown-container {
@@ -154,7 +160,6 @@ lg.sapphic>l:nth-of-type(4n) {
     transform: translate(-50%);
     background-color: whitesmoke;
     border: 1pt solid black;
-    /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0.2);*/
     padding: 0.25em;
     max-height: 30vh;
     overflow-y: auto;
@@ -193,4 +198,9 @@ h3 {
 v {
     text-decoration: dotted underline;
     text-decoration-thickness: 2pt;
+}
+
+/* Classes meant to override others */
+.display-none {
+    display: none;
 }

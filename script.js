@@ -11,17 +11,17 @@ function initialLoad() {
     }
     var texts = document.getElementsByClassName("edition");
     for (tx of texts) {
-        tx.style.display = "none";
+        tx.classList.add("display-none");
     }
 }
 
 function selectText(textId) {
     var texts = document.getElementsByClassName("edition");
     for (tx of texts) {
-        tx.style.display = "none";
+        tx.classList.add("display-none");
     }
     var textToShow = document.getElementById(textId);
-    textToShow.style.display = "block";
+    textToShow.classList.remove("display-none");
 }
 
 function toggleEdition(editionId) {
