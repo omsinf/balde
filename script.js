@@ -17,6 +17,14 @@ const tifyLyrica1844 = new Tify({
     manifestUrl: iiifRefs.lyrica_1844.manifest,
 });
 
+// set event listeners (functions of a module not available to HTML inline listeners)
+document.getElementById("hf_lyrica_1643")?.addEventListener('click', () => toggleEdition('lyrica_1643'));
+document.getElementById("hf_lyrica_1660")?.addEventListener('click', () => toggleEdition('lyrica_1660'));
+document.getElementById("hf_lyrica_1729")?.addEventListener('click', () => toggleEdition('lyrica_1729'));
+document.getElementById("hf_lyrica_1805")?.addEventListener('click', () => toggleEdition('lyrica_1805'));
+document.getElementById("hf_lyrica_1844")?.addEventListener('click', () => toggleEdition('lyrica_1844'));
+document.getElementById("hf_lyrica_baldeani")?.addEventListener('click', () => toggleEdition('lyrica_baldeani'));
+
 document.onload = initialLoad;
 
 function initialLoad() {
@@ -88,16 +96,4 @@ function numberOfFieldsAtDisplay() {
         }
     }
     return n;
-}
-
-export {
-    initialLoad,
-    tifyLyrica1643,
-    tifyLyrica1660,
-    tifyLyrica1729,
-    tifyLyrica1805,
-    tifyLyrica1844,
-    selectText,
-    synchroniseScans,
-    toggleEdition
 }
