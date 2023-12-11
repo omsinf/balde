@@ -16,7 +16,7 @@ const tifyLyrica1844 = new Tify({
     manifestUrl: iiifRefs.lyrica_1844.manifest,
 });
 
-document.onload = initialLoad();
+document.onload = initialLoad;
 
 function initialLoad() {
     var checkboxes = document.getElementsByTagName("input");
@@ -28,7 +28,7 @@ function initialLoad() {
         f.classList.add("display-none");
     }
     var texts = document.getElementsByClassName("edition");
-    for (tx of texts) {
+    for (var tx of texts) {
         tx.classList.add("display-none");
     }
     mountTifys();
