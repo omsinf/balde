@@ -24,7 +24,7 @@ function initialLoad() {
         c.checked = false;
     }
     var frames = document.getElementsByClassName("content-field");
-    for (f of frames) {
+    for (var f of frames) {
         f.classList.add("display-none");
     }
     var texts = document.getElementsByClassName("edition");
