@@ -89,22 +89,8 @@ function numberOfFieldsAtDisplay() {
     return n;
 }
 
-function goToText(editionId, textId) {
-    if (iiifRefs[editionId]) {
-        const refs = iiifRefs[editionId]
-        if (refs[textId]) {
-            const url = uvBaseUrl + refs["manifest"] + uvCanvas + refs[textId]
-            console.log(url)
-            document.getElementById(`iframe_${editionId}`).src = url;
-        } else {
-            console.error(`No textId found in editionId ${editionId} for textId ${textId}`)
-        }
-    } else {
-        console.error(`No refs found for editionId ${editionId}`)
-    }
-}
-
 export {
+    initialLoad,
     tifyLyrica1643,
     tifyLyrica1660,
     tifyLyrica1729,
@@ -112,5 +98,5 @@ export {
     tifyLyrica1844,
     selectText,
     synchroniseScans,
-    synchroniseScans
+    toggleEdition
 }
