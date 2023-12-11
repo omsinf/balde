@@ -19,6 +19,7 @@ jobs:
       - run: mkdir artifacts
       - run: cp index.html artifacts
       - run: cp script.js artifacts
+      - run: cp iiifRefs.mjs artifacts
       - run: cp style.css artifacts
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v2
