@@ -1,3 +1,4 @@
+//@ts-check
 import { iiifRefs } from "./iiifRefs.mjs";
 
 const tifyLyrica1643 = new Tify({
@@ -20,7 +21,7 @@ document.onload = initialLoad;
 
 function initialLoad() {
     var checkboxes = document.getElementsByTagName("input");
-    for (c of checkboxes) {
+    for (var c of checkboxes) {
         c.checked = false;
     }
     var frames = document.getElementsByClassName("content-field");
@@ -44,11 +45,11 @@ function mountTifys() {
 
 function selectText(textId) {
     var texts = document.getElementsByClassName("edition");
-    for (tx of texts) {
+    for (var tx of texts) {
         tx.classList.add("display-none");
     }
     var textToShow = document.getElementById(textId);
-    textToShow.classList.remove("display-none");
+    textToShow?.classList.remove("display-none");
 }
 
 function synchroniseScans(textId) {
@@ -66,15 +67,15 @@ function synchroniseScans(textId) {
 
 function toggleEdition(editionId) {
     const optionField = document.getElementById(`hf_${editionId}`);
-    optionField.classList.toggle("header-field-selected");
+    optionField?.classList.toggle("header-field-selected");
     const frame = document.getElementById(editionId);
-    frame.classList.toggle("display-none");
+    frame?.classList.toggle("display-none");
     if (numberOfFieldsAtDisplay() > 0) {
         const placeholder = document.getElementById("placeholder");
-        placeholder.classList.add("display-none");
+        placeholder?.classList.add("display-none");
     } else {
         const placeholder = document.getElementById("placeholder");
-        placeholder.classList.remove("display-none");
+        placeholder?.classList.remove("display-none");
     }
 }
 
