@@ -12,7 +12,7 @@
     
     <xsl:template match="texts-selector-placeholder">
         <xsl:for-each select="$texts">
-            <span class="dropdown-item option" onclick="selectText('{/div/@id}')">
+            <span class="dropdown-item option" onclick="synchroniseAll('{/div/@id}')">
                 <xsl:value-of select="/div/h3" />
             </span>
         </xsl:for-each>

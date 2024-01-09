@@ -10,23 +10,44 @@
 
 <body>
     <div class="header">
-        <div id="hf_lyrica_1643" class="header-field option" onclick="toggleEdition('lyrica_1643')">
-            <span>Lyrica (1643)</span>
+        <div class="header-field ml-auto">
+            <div class="dropdown">
+                <span>Editiones</span>
+                <div class="dropdown-container">
+                    <div class="dropdown-content">
+                        <div id="hf_lyrica_1643" class="dropdown-item option" onclick="toggleEdition('lyrica_1643')">
+                            <span>Lyrica (1643)</span>
+                        </div>
+                        <div id="hf_lyrica_1660" class="dropdown-item option" onclick="toggleEdition('lyrica_1660')">
+                            <span>Lyrica (1660)</span>
+                        </div>
+                        <div id="hf_lyrica_1729" class="dropdown-item option" onclick="toggleEdition('lyrica_1729')">
+                            <span>Lyrica (1729)</span>
+                        </div>
+                        <div id="hf_lyrica_1805" class="dropdown-item option" onclick="toggleEdition('lyrica_1805')">
+                            <span>Lyrica (1805, ed. Orellius)</span>
+                        </div>
+                        <div id="hf_lyrica_1844" class="dropdown-item option" onclick="toggleEdition('lyrica_1844')">
+                            <span>Lyrica (1844, ed. Müller)</span>
+                        </div>
+                        <div id="hf_lyrica_baldeani" class="dropdown-item option"
+                            onclick="toggleEdition('lyrica_baldeani')">
+                            <span>Lyrica (edd. Baldeani)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="hf_lyrica_1660" class="header-field option" onclick="toggleEdition('lyrica_1660')">
-            <span>Lyrica (1660)</span>
-        </div>
-        <div id="hf_lyrica_1729" class="header-field option" onclick="toggleEdition('lyrica_1729')">
-            <span>Lyrica (1729)</span>
-        </div>
-        <div id="hf_lyrica_1805" class="header-field option" onclick="toggleEdition('lyrica_1805')">
-            <span>Lyrica (1805, ed. Orellius)</span>
-        </div>
-        <div id="hf_lyrica_1844" class="header-field option" onclick="toggleEdition('lyrica_1844')">
-            <span>Lyrica (1844, ed. Müller)</span>
-        </div>
-        <div id="hf_lyrica_baldeani" class="header-field option" onclick="toggleEdition('lyrica_baldeani')">
-            <span>Lyrica (edd. Baldeani)</span>
+
+        <div class="header-field">
+            <div class="dropdown">
+                <span>Elenchus Odarum</span>
+                <div class="dropdown-container">
+                    <div class="dropdown-content">
+                        <texts-selector-placeholder />
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="header-field ml-auto">
             <span>Fecit OMS 2023</span>
@@ -69,19 +90,7 @@
 
         <div id="lyrica_baldeani" class="content-field">
             <h2>Lyrica edd. Baldeani</h2>
-            <div class="centered">
-                <div class="dropdown">
-                    <h3>Elenchus Odarum</h3>
-                    <div class="dropdown-container">
-                        <div class="dropdown-content">
-                            <texts-selector-placeholder />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <texts-placeholder />
-
         </div>
     </div>
 
