@@ -10,8 +10,8 @@ body {
 
 .header {
     font-size: 1.2em;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .header-field {
@@ -51,8 +51,8 @@ body {
     overflow-y: auto;
 }
 
-.ml-auto {
-    margin-left: auto;
+.end {
+    justify-self: end;
 }
 
 /* Facsimiles */

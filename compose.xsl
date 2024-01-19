@@ -11,9 +11,33 @@
         )" />
     
     <xsl:template match="texts-selector-placeholder">
-        <xsl:for-each select="$texts">
-            <span class="dropdown-item option" onclick="synchroniseAll('{/div/@id}')">
-                <xsl:value-of select="/div/h3" />
+        <xsl:for-each select="1 to 43">
+            <span class="dropdown-item option" onclick="synchroniseAll('{concat('lyr-1-', .)}')">
+                <xsl:value-of select="concat('Ode I ', .)"/>
+            </span>
+        </xsl:for-each>
+        
+        <xsl:for-each select="1 to 50">
+            <span class="dropdown-item option" onclick="synchroniseAll('{concat('lyr-2-', .)}')">
+                <xsl:value-of select="concat('Ode II ', .)"/>
+            </span>
+        </xsl:for-each>
+        
+        <xsl:for-each select="1 to 48">
+            <span class="dropdown-item option" onclick="synchroniseAll('{concat('lyr-3-', .)}')">
+                <xsl:value-of select="concat('Ode III ', .)"/>
+            </span>
+        </xsl:for-each>
+        
+        <xsl:for-each select="1 to 49">
+            <span class="dropdown-item option" onclick="synchroniseAll('{concat('lyr-4-', .)}')">
+                <xsl:value-of select="concat('Ode IV ', .)"/>
+            </span>
+        </xsl:for-each>
+        
+        <xsl:for-each select="1 to 21">
+            <span class="dropdown-item option" onclick="synchroniseAll('{concat('epod-', .)}')">
+                <xsl:value-of select="concat('Epode ', .)"/>
             </span>
         </xsl:for-each>
         
