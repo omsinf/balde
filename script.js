@@ -142,6 +142,13 @@ const tifyLyrica1844 = new Tify({
     manifestUrl: iiifRefs.lyrica_1844.manifest,
 });
 
+const tifys = {}
+tifys["lyrica_1643"] = tifyLyrica1643;
+tifys["lyrica_1660"] = tifyLyrica1660;
+tifys["lyrica_1729"] = tifyLyrica1729;
+tifys["lyrica_1805"] = tifyLyrica1805;
+tifys["lyrica_1844"] = tifyLyrica1844;
+
 document.addEventListener("DOMContentLoaded", initialLoad);
 
 function initialLoad() {
@@ -179,20 +186,31 @@ function selectText(textId) {
         tx.classList.add("display-none");
     }
     var textToShow = document.getElementById(textId);
-    textToShow?.classList.remove("display-none");
+    if (textToShow) {
+        textToShow.classList.remove("display-none");
+    } else {
+        console.debug("Not available: '" + textId + "' for Lyrica edd. Baldeani");
+        document.getElementById("edition-placeholder")?.classList.remove("display-none");
+    }
 }
 
 function synchroniseScans(textId) {
-    tifyLyrica1643.ready.then(() =>
-        tifyLyrica1643.setPage(iiifRefs.lyrica_1643.pages[textId]));
-    tifyLyrica1660.ready.then(() =>
-        tifyLyrica1660.setPage(iiifRefs.lyrica_1660.pages[textId]));
-    tifyLyrica1729.ready.then(() =>
-        tifyLyrica1729.setPage(iiifRefs.lyrica_1729.pages[textId]));
-    tifyLyrica1805.ready.then(() =>
-        tifyLyrica1805.setPage(iiifRefs.lyrica_1805.pages[textId]));
-    tifyLyrica1844.ready.then(() =>
-        tifyLyrica1844.setPage(iiifRefs.lyrica_1844.pages[textId]));
+    setPageIfAvailable("lyrica_1643", textId);
+    setPageIfAvailable("lyrica_1660", textId);
+    setPageIfAvailable("lyrica_1729", textId);
+    setPageIfAvailable("lyrica_1805", textId);
+    setPageIfAvailable("lyrica_1844", textId);
+}
+
+function setPageIfAvailable(edition, textId) {
+    let tify = tifys[edition]
+    let page = iiifRefs[edition]?.pages[textId]
+    if (tify && page) {
+        tify.ready.then(() =>
+        tify.setPage(page))
+    } else {
+        console.debug("Not available: '" + textId + "' for '" + edition + "'")
+    }
 }
 
 function toggleEdition(editionId) {
