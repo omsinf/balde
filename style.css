@@ -11,7 +11,7 @@ body {
 .header {
     font-size: 1.2em;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .header-field {
@@ -53,6 +53,12 @@ body {
 
 .end {
     justify-self: end;
+}
+
+.frame-title {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2em;
 }
 
 /* Facsimiles */
