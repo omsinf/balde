@@ -78,7 +78,7 @@ export function initLinksToScans(editionId) {
                 link.addEventListener("click", () => setPageIfAvailable(editionId, key))
                 link.appendChild(document.createTextNode(key
                     .replace("lyr-1-", "Ode I ")
-                    .replace("lyr-2-", "Ode 2 ")
+                    .replace("lyr-2-", "Ode II ")
                     .replace("lyr-3-", "Ode III ")
                     .replace("lyr-4-", "Ode IV ")
                     .replace("epod-", "Epode ")))
