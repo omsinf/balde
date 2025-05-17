@@ -18,10 +18,6 @@ body {
     padding: 0.5em;
 }
 
-.header-field-selected {
-    background-color: gray;
-}
-
 .main {
     min-height: 70%;
     /* fill the page vertically to 100% minus header */
@@ -29,6 +25,48 @@ body {
     width: 100%;
     display: flex;
     flex-flow: wrap;
+}
+
+body.lyrica_1643 .placeholder,
+body.lyrica_1660 .placeholder,
+body.lyrica_1729 .placeholder,
+body.lyrica_1805 .placeholder,
+body.lyrica_1844 .placeholder,
+body.herder_terp .placeholder,
+body.neubig_lyr1 .placeholder,
+body.neubig_lyr2 .placeholder,
+body.neubig_lyr3 .placeholder,
+body.aigner_oden .placeholder,
+body.ed_baldeani .placeholder {
+    display: none;
+}
+
+body.lyrica_1643 .switch-lyrica_1643,
+body.lyrica_1660 .switch-lyrica_1660,
+body.lyrica_1729 .switch-lyrica_1729,
+body.lyrica_1805 .switch-lyrica_1805,
+body.lyrica_1844 .switch-lyrica_1844,
+body.herder_terp .switch-herder_terp,
+body.neubig_lyr1 .switch-neubig_lyr1,
+body.neubig_lyr2 .switch-neubig_lyr2,
+body.neubig_lyr3 .switch-neubig_lyr3,
+body.aigner_oden .switch-aigner_oden,
+body.ed_baldeani .switch-ed_baldeani {
+    background-color: gray;
+}
+
+body:not(.lyrica_1643) #lyrica_1643,
+body:not(.lyrica_1660) #lyrica_1660,
+body:not(.lyrica_1729) #lyrica_1729,
+body:not(.lyrica_1805) #lyrica_1805,
+body:not(.lyrica_1844) #lyrica_1844,
+body:not(.herder_terp) #herder_terp,
+body:not(.neubig_lyr1) #neubig_lyr1,
+body:not(.neubig_lyr2) #neubig_lyr2,
+body:not(.neubig_lyr3) #neubig_lyr3,
+body:not(.aigner_oden) #aigner_oden,
+body:not(.ed_baldeani) #ed_baldeani {
+    display: none;
 }
 
 .placeholder {

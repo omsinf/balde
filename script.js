@@ -2,17 +2,17 @@
 import { initLinksToScans, initLinksToTexts, toggleEdition } from "./modules/navigation.mjs";
 import { mountTifys } from "./modules/tifyAdapter.mjs";
 
-document.getElementById('hf_lyrica_1643')?.addEventListener("click", () => toggleEdition('lyrica_1643'))
-document.getElementById('hf_lyrica_1660')?.addEventListener("click", () => toggleEdition('lyrica_1660'))
-document.getElementById('hf_lyrica_1729')?.addEventListener("click", () => toggleEdition('lyrica_1729'))
-document.getElementById('hf_lyrica_1805')?.addEventListener("click", () => toggleEdition('lyrica_1805'))
-document.getElementById('hf_lyrica_1844')?.addEventListener("click", () => toggleEdition('lyrica_1844'))
-document.getElementById('hf_herder_terp')?.addEventListener("click", () => toggleEdition('herder_terp'))
-document.getElementById('hf_neubig_lyr1')?.addEventListener("click", () => toggleEdition('neubig_lyr1'))
-document.getElementById('hf_neubig_lyr2')?.addEventListener("click", () => toggleEdition('neubig_lyr2'))
-document.getElementById('hf_neubig_lyr3')?.addEventListener("click", () => toggleEdition('neubig_lyr3'))
-document.getElementById('hf_aigner_oden')?.addEventListener("click", () => toggleEdition('aigner_oden'))
-document.getElementById('hf_lyrica_baldeani')?.addEventListener("click", () => toggleEdition('lyrica_baldeani'))
+Array.from(document.getElementsByClassName('switch-lyrica_1643')).forEach(element => element.addEventListener("click", () => toggleEdition('lyrica_1643')))
+Array.from(document.getElementsByClassName('switch-lyrica_1660')).forEach(element => element.addEventListener("click", () => toggleEdition('lyrica_1660')))
+Array.from(document.getElementsByClassName('switch-lyrica_1729')).forEach(element => element.addEventListener("click", () => toggleEdition('lyrica_1729')))
+Array.from(document.getElementsByClassName('switch-lyrica_1805')).forEach(element => element.addEventListener("click", () => toggleEdition('lyrica_1805')))
+Array.from(document.getElementsByClassName('switch-lyrica_1844')).forEach(element => element.addEventListener("click", () => toggleEdition('lyrica_1844')))
+Array.from(document.getElementsByClassName('switch-herder_terp')).forEach(element => element.addEventListener("click", () => toggleEdition('herder_terp')))
+Array.from(document.getElementsByClassName('switch-neubig_lyr1')).forEach(element => element.addEventListener("click", () => toggleEdition('neubig_lyr1')))
+Array.from(document.getElementsByClassName('switch-neubig_lyr2')).forEach(element => element.addEventListener("click", () => toggleEdition('neubig_lyr2')))
+Array.from(document.getElementsByClassName('switch-neubig_lyr3')).forEach(element => element.addEventListener("click", () => toggleEdition('neubig_lyr3')))
+Array.from(document.getElementsByClassName('switch-aigner_oden')).forEach(element => element.addEventListener("click", () => toggleEdition('aigner_oden')))
+Array.from(document.getElementsByClassName('switch-ed_baldeani')).forEach(element => element.addEventListener("click", () => toggleEdition('ed_baldeani')))
 
 initLinksToScans("lyrica_1643")
 initLinksToScans("lyrica_1660")
@@ -29,14 +29,6 @@ initLinksToTexts()
 document.addEventListener("DOMContentLoaded", initialLoad);
 
 function initialLoad() {
-    var checkboxes = document.getElementsByTagName("input");
-    for (var c of checkboxes) {
-        c.checked = false;
-    }
-    var frames = document.getElementsByClassName("content-field");
-    for (var f of frames) {
-        f.classList.add("display-none");
-    }
     var texts = document.getElementsByClassName("edition");
     for (var tx of texts) {
         tx.classList.add("display-none");

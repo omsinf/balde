@@ -14,7 +14,7 @@ function selectText(textId) {
     if (textToShow) {
         textToShow.classList.remove("display-none");
     } else {
-        console.debug("Not available: '" + textId + "' for Lyrica edd. Baldeani");
+        console.debug(`Not available: '${textId}' for Lyrica edd. Baldeani.`);
         document.getElementById("edition-placeholder")?.classList.remove("display-none");
     }
 }
@@ -30,7 +30,7 @@ function setPageIfAvailable(edition, textId) {
         tify.ready.then(() =>
             tify.setPage(page))
     } else {
-        console.debug("Not available: '" + textId + "' for '" + edition + "'")
+        console.debug(`Not available: '${textId}' for '${edition}'.`)
     }
 }
 
@@ -38,28 +38,7 @@ function setPageIfAvailable(edition, textId) {
  * @param {string} editionId
  */
 export function toggleEdition(editionId) {
-    const optionField = document.getElementById(`hf_${editionId}`);
-    optionField?.classList.toggle("header-field-selected");
-    const frame = document.getElementById(editionId);
-    frame?.classList.toggle("display-none");
-    if (numberOfFieldsAtDisplay() > 0) {
-        const placeholder = document.getElementById("placeholder");
-        placeholder?.classList.add("display-none");
-    } else {
-        const placeholder = document.getElementById("placeholder");
-        placeholder?.classList.remove("display-none");
-    }
-}
-
-function numberOfFieldsAtDisplay() {
-    const editionContainers = document.getElementsByClassName('content-field');
-    var n = editionContainers.length;
-    for (var ec of editionContainers) {
-        if (ec.classList.value.includes("display-none")) {
-            n -= 1;
-        }
-    }
-    return n;
+    document.getElementById("body")?.classList.toggle(editionId)
 }
 
 /**
@@ -89,9 +68,9 @@ export function initLinksToScans(editionId) {
 }
 
 export function initLinksToTexts() {
-    const container = document.getElementById("lyrica_baldeani_content")
+    const container = document.getElementById("ed_baldeani_content")
     if (container == null) {
-        console.warn(`Element with id 'lyrica_baldeani_content' not found.`)
+        console.warn(`Element with id 'ed_baldeani_content' not found.`)
     } else {
         lyrica_baldeani.forEach(key => {
             const link = document.createElement("span")
